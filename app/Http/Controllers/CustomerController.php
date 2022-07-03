@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\customer;
 use App\Http\Requests\StorecustomerRequest;
 use App\Http\Requests\UpdatecustomerRequest;
+use App\Models\Customer;
 
 class CustomerController extends Controller
 {
@@ -15,7 +15,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        $customers = Customer::all();
+        dd('duar');
     }
 
     /**
@@ -82,5 +83,10 @@ class CustomerController extends Controller
     public function destroy(customer $customer)
     {
         //
+    }
+
+    public function dwafwaf()
+    {
+        # code...
     }
 }

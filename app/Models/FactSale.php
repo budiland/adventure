@@ -2,7 +2,13 @@
 
 namespace App\Models;
 
-use App\Models\Ship;
+use App\Models\Time;
+use App\Models\Store;
+use App\Models\Address;
+use App\Models\Product;
+use App\Models\Customer;
+use App\Models\Employee;
+use App\Models\ShipMethod;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -29,9 +35,9 @@ class FactSale extends Model
     {
         return $this->belongsTo(Store::class, 'StoreID');
     }
-    public function production(): BelongsTo
+    public function product(): BelongsTo
     {
-        return $this->belongsTo(Production::class, 'ProductionID');
+        return $this->belongsTo(Product::class, 'ProductID');
     }
     public function address(): BelongsTo
     {

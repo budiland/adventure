@@ -2,6 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Time;
+use App\Models\Product;
+use App\Models\Location;
+use App\Models\WorkOrder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

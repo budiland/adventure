@@ -19,6 +19,16 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'root']);
 
+// Route::resource('customer', App\Http\Controllers\CustomerController::class);
+Route::get('customer', [App\Http\Controllers\CustomerController::class, 'index'])->name('customer.index');
+Route::get('customer/create', [App\Http\Controllers\CustomerController::class, 'create'])->name('customer.create');
+Route::post('customer', [App\Http\Controllers\CustomerController::class, 'store'])->name('customer.store');
+Route::get('customer/{customer}', [App\Http\Controllers\CustomerController::class, 'show'])->name('customer.show');
+Route::get('customer/{customer}/edit', [App\Http\Controllers\CustomerController::class, 'edit'])->name('customer.edit');
+Route::put('customer/{customer}', [App\Http\Controllers\CustomerController::class, 'update'])->name('customer.update');
+Route::delete('customer/{customer}', [App\Http\Controllers\CustomerController::class, 'destroy'])->name('customer.destroy');
+Route::get('customer/dwafwaf', [App\Http\Controllers\CustomerController::class, 'dwafwaf'])->name('customer.dwafwaf');
+
 Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index']);
 //Language Translation
 
