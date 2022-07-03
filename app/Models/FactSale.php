@@ -11,20 +11,8 @@ class FactSale extends Model
 {
     use HasFactory;
 
-    protected  $fillable = [
-        'TimeID',
-        'CustomerID',
-        'StoreID',
-        'ProductionID',
-        'AddressID',
-        'EmployeeID',
-        'ShipMethodID',
-        'taxamt',
-        'freight',
-        'salesamt',
-        'linetotal',
-        'OrderQty',
-
+    protected  $guarded = [
+        'id',
     ];
 
     // belongs to
