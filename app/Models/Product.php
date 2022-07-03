@@ -25,4 +25,10 @@ class Product extends Model
     {
         return $this->hasMany(FactPurchasing::class, 'ProductID');
     }
+
+    // has many FactProduction
+    public function factProduction(): HasMany
+    {
+        return $this->hasMany(FactProduction::class, 'ProductID');
+    }
 }

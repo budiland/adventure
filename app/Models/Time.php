@@ -25,4 +25,10 @@ class Time extends Model
     {
         return $this->hasMany(FactPurchasing::class, 'TimeID');
     }
+
+    // has many FactProduction
+    public function factProduction(): HasMany
+    {
+        return $this->hasMany(FactProduction::class, 'TimeID');
+    }
 }
