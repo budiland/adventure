@@ -19,6 +19,11 @@ class FactSale extends Model
         'AddressID',
         'EmployeeID',
         'ShipMethodID',
+        'taxamt',
+        'freight',
+        'salesamt',
+        'linetotal',
+        'OrderQty',
 
     ];
 
