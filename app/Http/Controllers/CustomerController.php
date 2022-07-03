@@ -15,8 +15,14 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $customers = Customer::all();
-        dd('duar');
+        //get all
+        // $customers = Customer::all();
+        // get all customer where name budi
+        $customers = Customer::get();
+        // $customers = Customer::where('name', `'',` 'budi')->get();
+        // dd($customers[0]->factSales);
+        // return view customer with $customer data
+        return view('pages.customer', compact('customers'));
     }
 
     /**

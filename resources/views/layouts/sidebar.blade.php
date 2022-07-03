@@ -3,7 +3,7 @@
 
     <!-- LOGO -->
     <div class="navbar-brand-box">
-        <a href="{{url('index')}}" class="logo logo-dark">
+        <a href="{{ url('index') }}" class="logo logo-dark">
             <span class="logo-sm">
                 <img src="{{ URL::asset('/assets/images/logo-sm.png') }}" alt="" height="22">
             </span>
@@ -12,7 +12,7 @@
             </span>
         </a>
 
-        <a href="{{url('index')}}" class="logo logo-light">
+        <a href="{{ url('index') }}" class="logo logo-light">
             <span class="logo-sm">
                 <img src="{{ URL::asset('/assets/images/logo-sm.png') }}" alt="" height="22">
             </span>
@@ -35,42 +35,82 @@
                 <li class="menu-title">@lang('translation.Menu')</li>
 
                 <li>
-                    <a href="{{url('index')}}">
-                        <i class="uil-home-alt"></i><span class="badge rounded-pill bg-primary float-end">01</span>
+                    <a href="{{ route('dashboard') }}">
+                        <i class="uil-cube"></i><span class="badge rounded-pill bg-primary float-end">01</span>
                         <span>@lang('translation.Dashboard')</span>
                     </a>
                 </li>
 
+                <li class="menu-title">Sales</li>
+
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="uil-window-section"></i>
-                        <span>@lang('translation.Layouts')</span>
+                    <a href="{{ route('sales.finance') }}" class="waves-effect">
+                        <i class="uil-dollar-sign"></i>
+                        <span>Finance</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="true">
-                        <li>
-                            <a href="javascript: void(0);" class="has-arrow">@lang('translation.Vertical')</a>
-                            <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="layouts-dark-sidebar">@lang('translation.Dark_Sidebar')</a></li>
-                                <li><a href="layouts-compact-sidebar">@lang('translation.Compact_Sidebar')</a></li>
-                                <li><a href="layouts-icon-sidebar">@lang('translation.Icon_Sidebar')</a></li>
-                                <li><a href="layouts-boxed">@lang('translation.Boxed_Width')</a></li>
-                                <li><a href="layouts-preloader">@lang('translation.Preloader')</a></li>
-                                <li><a href="layouts-colored-sidebar">@lang('translation.Colored_Sidebar')</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);" class="has-arrow">@lang('translation.Horizontal')</a>
-                            <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="layouts-horizontal">@lang('translation.Horizontal')</a></li>
-                                <li><a href="layouts-hori-topbar-dark">@lang('translation.Dark_Topbar')</a></li>
-                                <li><a href="layouts-hori-boxed-width">@lang('translation.Boxed_Width')</a></li>
-                                <li><a href="layouts-hori-preloader">@lang('translation.Preloader')</a></li>
-                            </ul>
-                        </li>
-                    </ul>
                 </li>
 
-                <li class="menu-title">@lang('translation.Apps')</li>
+                <li>
+                    <a href="{{ route('sales.order') }}" class="waves-effect">
+                        <i class="uil-comment-alt-verify"></i>
+                        <span>Order</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('sales.shipment') }}" class="waves-effect">
+                        <i class="uil-ship"></i>
+                        <span>Shipment</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('sales.store') }}" class="waves-effect">
+                        <i class="uil-shopping-basket"></i>
+                        <span>Store</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('sales.region') }}" class="waves-effect">
+                        <i class="uil-map"></i>
+                        <span>Region</span>
+                    </a>
+                </li>
+
+                <li class="menu-title">Production</li>
+
+                <li>
+                    <a href="{{ route('production.inventory') }}" class="waves-effect">
+                        <i class="uil-swatchbook"></i>
+                        <span>Inventory</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('production.product') }}" class="waves-effect">
+                        <i class="uil-telescope"></i>
+                        <span>Product</span>
+                    </a>
+                </li>
+
+                <li class="menu-title">Purchasing</li>
+
+                <li>
+                    <a href="{{ route('purchasing.product') }}" class="waves-effect">
+                        <i class="uil-truck-loading"></i>
+                        <span>Product</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('purchasing.vendor') }}" class="waves-effect">
+                        <i class="uil-home-alt"></i>
+                        <span>Vendor</span>
+                    </a>
+                </li>
+
+                {{-- <li class="menu-title">@lang('translation.Apps')</li>
 
                 <li>
                     <a href="calendar" class="waves-effect">
@@ -287,7 +327,7 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
             </ul>
         </div>

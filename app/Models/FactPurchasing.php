@@ -15,6 +15,8 @@ class FactPurchasing extends Model
 {
     use HasFactory;
 
+    protected $table = 'factpurchasing';
+
     protected  $guarded = [
         'id',
     ];

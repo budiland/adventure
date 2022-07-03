@@ -54,4 +54,9 @@ class HomeController extends Controller
     {
         return view('form-repeater');
     }
+
+    public function dashboard()
+    {
+        return view('pages.dashboard');
+    }
 }

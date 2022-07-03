@@ -12,17 +12,19 @@ use App\Models\ShipMethod;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\DB;
 
 class FactSale extends Model
 {
     use HasFactory;
+
+    protected $table = 'factsales';
 
     protected  $guarded = [
         'id',
     ];
 
     // belongs to
-
     public function time(): BelongsTo
     {
         return $this->belongsTo(Time::class, 'TimeID');
@@ -50,5 +52,44 @@ class FactSale extends Model
     public function shipmethod(): BelongsTo
     {
         return $this->belongsTo(ShipMethod::class, 'ShipMethodID');
+    }
+
+    public static function getProductData()
+    {
+        // ========== Original Query ==========
+        // SELECT product.Name,
+        // SUM(factsales.salesamt) salesamt
+        // FROM factsales
+        // JOIN product ON (factsales.ProductID=product.ProductID)
+        // Group by product.Name
+        // Order by SUM(factsales.salesamt)
+        // limit 5;
+        // =========================
+
+        // select from database using raw query
+        $datas = DB::table('factsales as s')
+            ->select(DB::raw('p.Name, SUM(s.salesamt) salesamt'))
+            ->join('product as p', 's.ProductID', '=', 'p.ProductID')
+            ->groupBy('p.Name')
+            ->orderBy('salesamt', 'desc')
+            // limit 10 tertinggi karena chart tidak cukup untuk menampilkan semua data
+            ->limit(10)
+            ->get();
+
+        // initiate array
+        $salesamt = [];
+        $name = [];
+
+        foreach ($datas as $key => $data) {
+            // append salesamt to array
+            array_push($salesamt, $data->salesamt);
+            // append name to array
+            array_push($name, $data->Name);
+        }
+        // set array to object
+        $datas->salesamt = $salesamt;
+        $datas->name = $name;
+
+        return $datas;
     }
 }

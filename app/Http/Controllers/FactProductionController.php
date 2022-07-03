@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FactProduction;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreFactProductionRequest;
 use App\Http\Requests\UpdateFactProductionRequest;
 
@@ -13,20 +14,20 @@ class FactProductionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+    // public function index()
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    // public function create()
+    // {
+    //     //
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -34,10 +35,10 @@ class FactProductionController extends Controller
      * @param  \App\Http\Requests\StoreFactProductionRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFactProductionRequest $request)
-    {
-        //
-    }
+    // public function store(StoreFactProductionRequest $request)
+    // {
+    //     //
+    // }
 
     /**
      * Display the specified resource.
@@ -45,10 +46,10 @@ class FactProductionController extends Controller
      * @param  \App\Models\FactProduction  $factProduction
      * @return \Illuminate\Http\Response
      */
-    public function show(FactProduction $factProduction)
-    {
-        //
-    }
+    // public function show(FactProduction $factProduction)
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -56,10 +57,10 @@ class FactProductionController extends Controller
      * @param  \App\Models\FactProduction  $factProduction
      * @return \Illuminate\Http\Response
      */
-    public function edit(FactProduction $factProduction)
-    {
-        //
-    }
+    // public function edit(FactProduction $factProduction)
+    // {
+    //     //
+    // }
 
     /**
      * Update the specified resource in storage.
@@ -68,10 +69,10 @@ class FactProductionController extends Controller
      * @param  \App\Models\FactProduction  $factProduction
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateFactProductionRequest $request, FactProduction $factProduction)
-    {
-        //
-    }
+    // public function update(UpdateFactProductionRequest $request, FactProduction $factProduction)
+    // {
+    //     //
+    // }
 
     /**
      * Remove the specified resource from storage.
@@ -79,8 +80,20 @@ class FactProductionController extends Controller
      * @param  \App\Models\FactProduction  $factProduction
      * @return \Illuminate\Http\Response
      */
-    public function destroy(FactProduction $factProduction)
+    // public function destroy(FactProduction $factProduction)
+    // {
+    //     //
+    // }
+
+    public function inventory()
     {
-        //
+        $factProductions = FactProduction::all();
+        return view('pages.inventory', compact('factProductions'));
+    }
+
+    public function product()
+    {
+        $factProductions = FactProduction::all();
+        return view('pages.production', compact('factProductions'));
     }
 }

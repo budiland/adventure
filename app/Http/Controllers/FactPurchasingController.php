@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FactPurchasing;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreFactPurchasingRequest;
 use App\Http\Requests\UpdateFactPurchasingRequest;
 
@@ -13,20 +14,20 @@ class FactPurchasingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+    // public function index()
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    // public function create()
+    // {
+    //     //
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -34,10 +35,10 @@ class FactPurchasingController extends Controller
      * @param  \App\Http\Requests\StoreFactPurchasingRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFactPurchasingRequest $request)
-    {
-        //
-    }
+    // public function store(StoreFactPurchasingRequest $request)
+    // {
+    //     //
+    // }
 
     /**
      * Display the specified resource.
@@ -45,10 +46,10 @@ class FactPurchasingController extends Controller
      * @param  \App\Models\FactPurchasing  $factPurchasing
      * @return \Illuminate\Http\Response
      */
-    public function show(FactPurchasing $factPurchasing)
-    {
-        //
-    }
+    // public function show(FactPurchasing $factPurchasing)
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -56,10 +57,10 @@ class FactPurchasingController extends Controller
      * @param  \App\Models\FactPurchasing  $factPurchasing
      * @return \Illuminate\Http\Response
      */
-    public function edit(FactPurchasing $factPurchasing)
-    {
-        //
-    }
+    // public function edit(FactPurchasing $factPurchasing)
+    // {
+    //     //
+    // }
 
     /**
      * Update the specified resource in storage.
@@ -68,10 +69,10 @@ class FactPurchasingController extends Controller
      * @param  \App\Models\FactPurchasing  $factPurchasing
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateFactPurchasingRequest $request, FactPurchasing $factPurchasing)
-    {
-        //
-    }
+    // public function update(UpdateFactPurchasingRequest $request, FactPurchasing $factPurchasing)
+    // {
+    //     //
+    // }
 
     /**
      * Remove the specified resource from storage.
@@ -79,8 +80,20 @@ class FactPurchasingController extends Controller
      * @param  \App\Models\FactPurchasing  $factPurchasing
      * @return \Illuminate\Http\Response
      */
-    public function destroy(FactPurchasing $factPurchasing)
+    // public function destroy(FactPurchasing $factPurchasing)
+    // {
+    //     //
+    // }
+
+    public function product()
     {
-        //
+        $factPurchasings = FactPurchasing::all();
+        return view('pages.product', compact('factPurchasings'));
+    }
+
+    public function vendor()
+    {
+        $factPurchasings = FactPurchasing::all();
+        return view('pages.vendor', compact('factPurchasings'));
     }
 }
