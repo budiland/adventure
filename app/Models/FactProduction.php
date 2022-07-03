@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class FactProduction extends Model
 {
@@ -12,4 +13,21 @@ class FactProduction extends Model
     protected  $guarded = [
         'id',
     ];
+
+    public function time(): BelongsTo
+    {
+        return $this->belongsTo(Time::class, 'TimeID');
+    }
+    public function location(): BelongsTo
+    {
+        return $this->belongsTo(Location::class, 'LocationID');
+    }
+    public function product(): BelongsTo
+    {
+        return $this->belongsTo(Product::class, 'ProductID');
+    }
+    public function workOrder(): BelongsTo
+    {
+        return $this->belongsTo(WorkOrder::class, 'WorkOrderID');
+    }
 }
