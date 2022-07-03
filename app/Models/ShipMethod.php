@@ -19,4 +19,10 @@ class ShipMethod extends Model
     {
         return $this->hasMany(FactSale::class, 'ShipMethodID');
     }
+
+    // has many FactPurchasing
+    public function factPurchasing(): HasMany
+    {
+        return $this->hasMany(FactPurchasing::class, 'ShipMethodID');
+    }
 }
