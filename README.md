@@ -16,8 +16,14 @@
 * Jika berhasil akan muncul seperti ini "Starting Laravel development server: http://127.0.0.1:8000". Kemudian bisa dilanjutkan dengan register terlebih dahulu
 * Setelah berhasil regiter copy dan paste link berikut http://127.0.0.1:8000/dashboard
 
-## Preview Model
+## Preview 
+Model database yang telah diimport akan tampak seperti ini
 ![Preview DB](https://user-images.githubusercontent.com/70278182/177504208-9d96f27b-82c9-4f5b-a71f-1a9cc3cdb6c0.jpeg)
+Untuk dashboardnya memiliki dua tema utama yang tampak seperti gambar dibawah
+![White](https://user-images.githubusercontent.com/70278182/177508383-de17c3a6-c355-439a-a548-0aaa6e8bf9f9.jpeg)
+![Black](https://user-images.githubusercontent.com/70278182/177508395-e26593dd-fb05-48c9-9230-6b686a081b94.jpeg)
+
+## License
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
@@ -27,7 +33,5 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
-
-## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
