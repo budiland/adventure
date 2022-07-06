@@ -9,7 +9,7 @@
 * Start apache dan mysql server dan tomcat
 * Buka phpMyAdmin (localhost/phpmyadmin)
 * Buat database dengan nama adventure
-* Extract adventure.rar dan import file adventure.sql yang telah didownload ke dalam database adventure.
+* Extract adventure.rar yang telah didownload kemudian import file adventure.sql ke dalam database adventure.
 * Masukan folder mondiran ke dalam server Tomcat bawaan dari XAMPP (xampp/tomcat/webapps)
 * Jalankan aplikasi dengan mengakses http://adventure.test/dashboard
 * Apabila masih gagal, buka cmd dan arahkan cmd ke xampp/htdocs/adventure (Untuk cara normalnya inputkan "cd.." 2 kali sehigga cmd mengarah hanya ke "C:\>" saja, kemudian inputkan "cd xampp/htdocs/adventure" menjadi "C:\xampp\htdocs\adventure>") (Pastikan composer telah dipasang) Kemudian imputkan "php artisan serve"
