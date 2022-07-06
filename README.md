@@ -3,13 +3,13 @@
 ## Langkah-langkah menjalankan aplikasi
 * Pastikan anda sudah memiliki aplikasi Laragon/XAMPP dengan Apache, MySQL, Tomcat dan phpMyAdmin terpasang
 * Pastikan anda sudah composer laravel jika belum, berikut adalah [tutorialnya](https://www.niagahoster.co.id/blog/cara-install-composer/)
-* Download adventure.zip ini dan download adventure.sql dan mondrian.zip [disini](https://drive.google.com/drive/folders/1QrBOgrpBVdoJx6fI6jiZOH6jmMUhWba2?usp=sharing)
+* Download adventure.zip ini dan mondrian.zip [disini](https://drive.google.com/drive/folders/1QrBOgrpBVdoJx6fI6jiZOH6jmMUhWba2?usp=sharing)
 * Extract adventure.zip pada folder htdocs XAMPP (xampp/htdocs) atau www Laragon (laragon/www)
 * Jalankan Laragon/Xampp control panel
 * Start apache dan mysql server dan tomcat
 * Buka phpMyAdmin (localhost/phpmyadmin)
 * Buat database dengan nama adventure
-* Import file adventure.sql yang telah didownload ke dalam database adventure.
+* Extract adventure.rar dan import file adventure.sql yang telah didownload ke dalam database adventure.
 * Masukan folder mondiran ke dalam server Tomcat bawaan dari XAMPP (xampp/tomcat/webapps)
 * Jalankan aplikasi dengan mengakses http://adventure.test/dashboard
 * Apabila masih gagal, buka cmd dan arahkan cmd ke xampp/htdocs/adventure (Untuk cara normalnya inputkan "cd.." 2 kali sehigga cmd mengarah hanya ke "C:\>" saja, kemudian inputkan "cd xampp/htdocs/adventure" menjadi "C:\xampp\htdocs\adventure>") (Pastikan composer telah dipasang) Kemudian imputkan "php artisan serve"
