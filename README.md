@@ -11,8 +11,13 @@
 * Buat database dengan nama adventure
 * Import file adventure.sql yang telah didownload ke dalam database adventure.
 * Masukan folder mondiran ke dalam server Tomcat bawaan dari XAMPP (xampp/tomcat/webapps)
-* Jika composer telah terpasang, buka cmd dan arahkan cmd ke xampp/htdocs/adventure (Untuk cara normalnya inputkan "cd.." 2 kali sehigga cmd mengarah hanya ke "C:\>" saja, kemudian inputkan "cd xampp/htdocs/adventure" menjadi "C:\xampp\htdocs\adventure>")
 * Jalankan aplikasi dengan mengakses http://adventure.test/dashboard
+* Apabila masih gagal, buka cmd dan arahkan cmd ke xampp/htdocs/adventure (Untuk cara normalnya inputkan "cd.." 2 kali sehigga cmd mengarah hanya ke "C:\>" saja, kemudian inputkan "cd xampp/htdocs/adventure" menjadi "C:\xampp\htdocs\adventure>") (Pastikan composer telah dipasang) Kemudian imputkan "php artisan serve"
+* Jika berhasil akan muncul seperti ini "Starting Laravel development server: http://127.0.0.1:8000". Kemudian bisa dilanjutkan dengan register terlebih dahulu
+* Setelah berhasil regiter copy dan paste link berikut http://127.0.0.1:8000/dashboard
+
+## Preview
+![Preview DB](https://user-images.githubusercontent.com/70278182/177504208-9d96f27b-82c9-4f5b-a71f-1a9cc3cdb6c0.jpeg)
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
